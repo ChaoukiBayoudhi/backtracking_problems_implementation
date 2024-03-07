@@ -16,6 +16,9 @@ class NQueensProblem:
         return ok
     def backtrack_solution(self,candidate_solution=[]):
         if len(candidate_solution)==self.n:
+            #add the solution to the result list
+            #we need to create a new list because the candidate_solution
+            #is a reference and it will be modified in the next iterations
             self.result.append(list(candidate_solution))
         else:
             for i in range(self.n):
